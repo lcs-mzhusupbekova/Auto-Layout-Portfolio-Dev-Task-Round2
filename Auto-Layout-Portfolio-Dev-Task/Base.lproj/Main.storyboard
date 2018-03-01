@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,33 +19,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miO-jK-Pqk" userLabel="Blue View">
-                                <rect key="frame" x="67" y="18" width="240" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miO-jK-Pqk" userLabel="Blue View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iXN-bj-oT3" userLabel="Red View">
-                                <rect key="frame" x="67" y="145" width="240" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iXN-bj-oT3" userLabel="Red View">
+                                <rect key="frame" x="0.0" y="222.5" width="125" height="222.5"/>
                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-Tl-zEx" userLabel="Green View">
-                                <rect key="frame" x="67" y="273" width="240" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-Tl-zEx" userLabel="Green View">
+                                <rect key="frame" x="125" y="222.5" width="125" height="222.5"/>
                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzS-78-RSg" userLabel="Black View">
-                                <rect key="frame" x="67" y="401" width="240" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzS-78-RSg" userLabel="Black View">
+                                <rect key="frame" x="250" y="222.5" width="125" height="222.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-fS-Chr" userLabel="Brown View">
-                                <rect key="frame" x="67" y="529" width="240" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnV-fS-Chr" userLabel="Brown View">
+                                <rect key="frame" x="0.0" y="445" width="375" height="222.5"/>
                                 <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pzS-78-RSg" firstAttribute="leading" secondItem="Xth-Tl-zEx" secondAttribute="trailing" id="0n5-mM-VnT"/>
+                            <constraint firstItem="iXN-bj-oT3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="2av-31-Qgd"/>
+                            <constraint firstItem="pzS-78-RSg" firstAttribute="top" secondItem="miO-jK-Pqk" secondAttribute="bottom" id="2pG-c5-R0y"/>
+                            <constraint firstItem="iXN-bj-oT3" firstAttribute="bottom" secondItem="AnV-fS-Chr" secondAttribute="top" id="3xB-F6-FY3"/>
+                            <constraint firstItem="miO-jK-Pqk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4kk-Pz-9Va"/>
+                            <constraint firstItem="pzS-78-RSg" firstAttribute="bottom" secondItem="AnV-fS-Chr" secondAttribute="top" id="BOY-zJ-9h1"/>
+                            <constraint firstItem="AnV-fS-Chr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="Fup-nL-Juf"/>
+                            <constraint firstItem="Xth-Tl-zEx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="Iza-MR-QbT"/>
+                            <constraint firstItem="miO-jK-Pqk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="J6i-2F-Rvu"/>
+                            <constraint firstItem="Xth-Tl-zEx" firstAttribute="leading" secondItem="iXN-bj-oT3" secondAttribute="trailing" id="Nat-Da-rnB"/>
+                            <constraint firstItem="miO-jK-Pqk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="NbT-Te-NE7"/>
+                            <constraint firstItem="miO-jK-Pqk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YMG-cZ-SFC"/>
+                            <constraint firstItem="AnV-fS-Chr" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="e4t-H2-OvY"/>
+                            <constraint firstItem="iXN-bj-oT3" firstAttribute="top" secondItem="miO-jK-Pqk" secondAttribute="bottom" id="evl-1b-H5A"/>
+                            <constraint firstItem="Xth-Tl-zEx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="gMU-NV-VBW"/>
+                            <constraint firstItem="AnV-fS-Chr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="hF1-Lq-VMB"/>
+                            <constraint firstItem="pzS-78-RSg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="j9f-tR-5RE"/>
+                            <constraint firstItem="iXN-bj-oT3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kTV-Bj-pl6"/>
+                            <constraint firstItem="pzS-78-RSg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="nFu-dO-lzW"/>
+                            <constraint firstItem="iXN-bj-oT3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="oJY-11-hZS"/>
+                            <constraint firstItem="AnV-fS-Chr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u4G-pr-yw0"/>
+                            <constraint firstItem="Xth-Tl-zEx" firstAttribute="bottom" secondItem="AnV-fS-Chr" secondAttribute="top" id="v8J-4R-Y59"/>
+                            <constraint firstItem="Xth-Tl-zEx" firstAttribute="top" secondItem="miO-jK-Pqk" secondAttribute="bottom" id="x31-vj-Y9w"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
